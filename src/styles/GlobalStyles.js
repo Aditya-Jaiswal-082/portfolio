@@ -30,8 +30,15 @@ export const GlobalStyles = createGlobalStyle`
     overflow-x: hidden;
   }
 
-  /* Hide default cursor on desktop for custom cursor */
-  @media (min-width: 1024px) {
+  /* Hide custom cursor on mobile/tablet */
+  @media (max-width: 1024px) {
+    * {
+      cursor: auto !important;
+    }
+  }
+
+  /* Only use custom cursor on desktop */
+  @media (min-width: 1025px) {
     * {
       cursor: none !important;
     }
@@ -39,7 +46,7 @@ export const GlobalStyles = createGlobalStyle`
 
   /* Scrollbar Styles */
   ::-webkit-scrollbar {
-    width: 12px;
+    width: 8px;
   }
 
   ::-webkit-scrollbar-track {
@@ -55,9 +62,21 @@ export const GlobalStyles = createGlobalStyle`
     background: linear-gradient(135deg, #8b5cf6, #ec4899);
   }
 
+  @media (max-width: 768px) {
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+  }
+
   /* Selection styles */
   ::selection {
     background: rgba(99, 102, 241, 0.3);
     color: ${({ theme }) => theme.colors.text};
+  }
+
+  /* Prevent horizontal scroll on mobile */
+  body, html {
+    max-width: 100vw;
+    overflow-x: hidden;
   }
 `;

@@ -1,4 +1,4 @@
-// src/components/HeroSection.jsx
+// src/components/HeroSection.jsx - COMPLETE WITH PROFILE IMAGE
 
 import React from "react";
 import styled, { keyframes } from "styled-components";
@@ -47,6 +47,15 @@ const Section = styled.section`
     align-items: center;
     justify-content: space-between;
   }
+
+  @media (max-width: 768px) {
+    padding: 2rem 1.5rem;
+    justify-content: center;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1.5rem 1rem;
+  }
 `;
 
 const FloatingShape = styled.div`
@@ -79,12 +88,38 @@ const FloatingShape = styled.div`
     left: 70%;
     animation-delay: 4s;
   }
+
+  @media (max-width: 768px) {
+    &:nth-child(1) {
+      width: 200px;
+      height: 200px;
+      top: 5%;
+      left: -20%;
+    }
+    
+    &:nth-child(2) {
+      width: 150px;
+      height: 150px;
+      bottom: 10%;
+      right: -20%;
+    }
+    
+    &:nth-child(3) {
+      display: none;
+    }
+  }
 `;
 
 const TextContainer = styled(motion.div)`
   flex: 1;
   max-width: 600px;
   z-index: 2;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
 `;
 
 const Title = styled(motion.h1)`
@@ -98,8 +133,16 @@ const Title = styled(motion.h1)`
   background-clip: text;
   animation: ${gradientShift} 3s ease infinite;
   
+  @media (max-width: 1024px) {
+    font-size: 3rem;
+  }
+
   @media (max-width: 768px) {
     font-size: 2.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2rem;
   }
 `;
 
@@ -110,7 +153,12 @@ const Subtitle = styled(motion.h2)`
   color: #a78bfa;
   
   @media (max-width: 768px) {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.25rem;
   }
 `;
 
@@ -122,6 +170,12 @@ const Tagline = styled(motion.p)`
   
   @media (max-width: 768px) {
     font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    line-height: 1.5;
   }
 `;
 
@@ -129,6 +183,17 @@ const ButtonGroup = styled(motion.div)`
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Button = styled(motion.a)`
@@ -140,6 +205,8 @@ const Button = styled(motion.a)`
   position: relative;
   overflow: hidden;
   transition: all 0.3s;
+  display: inline-block;
+  text-align: center;
   
   ${({ primary }) =>
     primary
@@ -183,6 +250,18 @@ const Button = styled(motion.a)`
     width: 300px;
     height: 300px;
   }
+
+  @media (max-width: 768px) {
+    padding: 0.9rem 1.75rem;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    max-width: 280px;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.9rem;
+  }
 `;
 
 const ImageContainer = styled(motion.div)`
@@ -193,6 +272,10 @@ const ImageContainer = styled(motion.div)`
   z-index: 2;
 
   @media (min-width: 768px) {
+    margin-top: 0;
+  }
+
+  @media (max-width: 768px) {
     margin-top: 0;
   }
 `;
@@ -214,6 +297,12 @@ const ProfileImage = styled.img`
     width: 250px;
     height: 250px;
   }
+
+  @media (max-width: 480px) {
+    width: 200px;
+    height: 200px;
+    border: 3px solid rgba(99, 102, 241, 0.5);
+  }
 `;
 
 const Particles = styled.div`
@@ -233,6 +322,13 @@ const Particles = styled.div`
     box-shadow: 0 0 10px rgba(99, 102, 241, 0.8);
     animation: ${float} ${() => Math.random() * 3 + 2}s ease-in-out infinite;
     animation-delay: ${() => Math.random() * 2}s;
+  }
+
+  @media (max-width: 768px) {
+    span {
+      width: 3px;
+      height: 3px;
+    }
   }
 `;
 
@@ -315,7 +411,7 @@ export const HeroSection = () => {
           transition={{ type: "spring", stiffness: 300 }}
         >
           <ProfileImage
-            src="https://via.placeholder.com/300.png?text=Your+Image"
+            src="/profile.jpg"
             alt="Aditya Jaiswal"
           />
         </ProfileImageWrapper>

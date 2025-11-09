@@ -1,4 +1,4 @@
-// src/components/ProjectsSection.jsx
+// src/components/ProjectsSection.jsx - COMPLETE WITH LOCAL IMAGES
 
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
@@ -30,6 +30,14 @@ const Section = styled.section`
     background-size: 50px 50px;
     animation: ${float} 20s ease-in-out infinite;
   }
+
+  @media (max-width: 768px) {
+    padding: 3rem 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 2.5rem 1rem;
+  }
 `;
 
 const Container = styled.div`
@@ -52,6 +60,10 @@ const Title = styled(motion.h2)`
   @media (max-width: 768px) {
     font-size: 2.5rem;
   }
+
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
 `;
 
 const Subtitle = styled(motion.p)`
@@ -62,6 +74,17 @@ const Subtitle = styled(motion.p)`
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
 `;
 
 const FilterButtons = styled(motion.div)`
@@ -70,6 +93,12 @@ const FilterButtons = styled(motion.div)`
   gap: 1rem;
   margin-bottom: 3rem;
   flex-wrap: wrap;
+  padding: 0 1rem;
+
+  @media (max-width: 768px) {
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+  }
 `;
 
 const FilterButton = styled(motion.button)`
@@ -86,12 +115,23 @@ const FilterButton = styled(motion.button)`
   cursor: pointer;
   transition: all 0.3s;
   backdrop-filter: blur(10px);
+  font-size: 1rem;
 
   &:hover {
     background: linear-gradient(135deg, #6366f1, #8b5cf6);
     border-color: #6366f1;
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
   }
 `;
 
@@ -106,6 +146,14 @@ const ProjectsGrid = styled(motion.div)`
 
   @media(min-width: 1200px) {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    gap: 2rem;
+  }
+
+  @media (max-width: 480px) {
+    gap: 1.5rem;
   }
 `;
 
@@ -145,6 +193,12 @@ const Card = styled(motion.div)`
     border-color: rgba(99, 102, 241, 0.5);
     box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3);
   }
+
+  @media (max-width: 768px) {
+    &:hover {
+      transform: translateY(-5px) scale(1.01);
+    }
+  }
 `;
 
 const ImageWrapper = styled.div`
@@ -170,6 +224,14 @@ const ImageWrapper = styled.div`
       transparent 100%
     );
   }
+
+  @media (max-width: 768px) {
+    height: 180px;
+  }
+
+  @media (max-width: 480px) {
+    height: 160px;
+  }
 `;
 
 const ProjectImage = styled.img`
@@ -179,10 +241,28 @@ const ProjectImage = styled.img`
   border-radius: 15px;
   z-index: 1;
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+
+  @media (max-width: 768px) {
+    width: 100px;
+    height: 100px;
+  }
+
+  @media (max-width: 480px) {
+    width: 80px;
+    height: 80px;
+  }
 `;
 
 const CardContent = styled.div`
   padding: 1.5rem;
+
+  @media (max-width: 768px) {
+    padding: 1.25rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem;
+  }
 `;
 
 const ProjectName = styled.h3`
@@ -193,6 +273,14 @@ const ProjectName = styled.h3`
   display: flex;
   align-items: center;
   gap: 0.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.25rem;
+  }
 `;
 
 const Description = styled.p`
@@ -200,6 +288,16 @@ const Description = styled.p`
   color: #94a3b8;
   margin-bottom: 1.25rem;
   line-height: 1.6;
+
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
 `;
 
 const TechStack = styled.div`
@@ -207,6 +305,11 @@ const TechStack = styled.div`
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
+
+  @media (max-width: 480px) {
+    gap: 0.4rem;
+    margin-bottom: 1.25rem;
+  }
 `;
 
 const TechTag = styled.span`
@@ -217,11 +320,21 @@ const TechTag = styled.span`
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 600;
+
+  @media (max-width: 480px) {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.75rem;
+  }
 `;
 
 const ButtonGroup = styled.div`
   display: flex;
   gap: 1rem;
+
+  @media (max-width: 480px) {
+    gap: 0.75rem;
+    flex-direction: column;
+  }
 `;
 
 const LinkButton = styled(motion.a)`
@@ -248,6 +361,16 @@ const LinkButton = styled(motion.a)`
     box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
     border-color: #6366f1;
   }
+
+  @media (max-width: 768px) {
+    padding: 0.7rem;
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.65rem;
+    font-size: 0.8rem;
+  }
 `;
 
 const projects = [
@@ -258,7 +381,7 @@ const projects = [
     category: "Full Stack",
     liveDemo: "https://mindlytics-1.onrender.com",
     githubRepo: "https://github.com/Aditya-Jaiswal-082/Mindlytics",
-    image: "https://via.placeholder.com/150?text=Mindlytics+Logo",
+    image: "/mindlytics.jpg",
   },
   {
     name: "Parcel Swift",
@@ -267,7 +390,7 @@ const projects = [
     category: "Full Stack",
     liveDemo: "https://parcelswift.vercel.app",
     githubRepo: "https://github.com/Aditya-Jaiswal-082/parcel",
-    image: "https://via.placeholder.com/150?text=Parcel+Swift",
+    image: "/parcelswift.jpg",
   },
   {
     name: "Finotes",
@@ -276,7 +399,7 @@ const projects = [
     category: "Frontend",
     liveDemo: "#",
     githubRepo: "https://github.com/Aditya-Jaiswal-082/Finotes",
-    image: "https://via.placeholder.com/150?text=Finotes",
+    image: "/finotes.jpg",
   },
   {
     name: "MY-TO-DO",
@@ -285,7 +408,7 @@ const projects = [
     category: "Frontend",
     liveDemo: "#",
     githubRepo: "https://github.com/Aditya-Jaiswal-082/MY-TO-DO",
-    image: "https://via.placeholder.com/150?text=MY-TO-DO",
+    image: "/mytodo.jpg",
   },
   {
     name: "Tic-Grid-Toe",
@@ -294,7 +417,7 @@ const projects = [
     category: "Mobile",
     liveDemo: "#",
     githubRepo: "https://github.com/Aditya-Jaiswal-082/TicTacToeApp-Expo",
-    image: "https://via.placeholder.com/150?text=Tic-Grid-Toe",
+    image: "/ticgridtoe.jpg",
   },
 ];
 
