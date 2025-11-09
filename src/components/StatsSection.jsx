@@ -130,8 +130,8 @@ const useCountUp = (end, duration = 2000, start = 0) => {
 };
 
 const stats = [
-  { icon: "🚀", end: 5, label: "Projects Completed", suffix: "+" },
-  { icon: "💼", end: 1, label: "Years Experience", suffix: "+" },
+  { icon: "🚀", end: 5, label: "Projects Completed", suffix: "" },
+  { icon: "💼", end: 6, label: "Months Experience", suffix: "+" },
   { icon: "💻", end: 10, label: "Technologies", suffix: "+" },
   { icon: "⭐", end: 100, label: "Commits", suffix: "+" },
 ];
