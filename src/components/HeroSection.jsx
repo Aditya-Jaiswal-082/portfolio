@@ -1,8 +1,9 @@
-// src/components/HeroSection.jsx - COMPLETE WITH PROFILE IMAGE
+// src/components/HeroSection.jsx
 
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import { motion } from "framer-motion";
+import profileImage from '../assets/profile.jpg'; // Add this import
 
 const float = keyframes`
   0%, 100% { transform: translateY(0px); }
@@ -411,7 +412,7 @@ export const HeroSection = () => {
           transition={{ type: "spring", stiffness: 300 }}
         >
           <ProfileImage
-            src="/profile.jpg"
+            src={profileImage}
             alt="Aditya Jaiswal"
           />
         </ProfileImageWrapper>

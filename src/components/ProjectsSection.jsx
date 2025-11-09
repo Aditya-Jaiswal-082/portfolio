@@ -1,8 +1,15 @@
-// src/components/ProjectsSection.jsx - COMPLETE WITH LOCAL IMAGES
+// src/components/ProjectsSection.jsx
 
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
+
+// Import all project images
+import mindlyticsImg from '../assets/mindlytics.jpg';
+import parcelswiftImg from '../assets/parcelswift.jpg';
+import finotesImg from '../assets/finotes.jpg';
+import mytodoImg from '../assets/mytodo.jpg';
+import ticgridtoeImg from '../assets/ticgridtoe.jpg';
 
 const float = keyframes`
   0%, 100% { transform: translateY(0px); }
@@ -381,7 +388,7 @@ const projects = [
     category: "Full Stack",
     liveDemo: "https://mindlytics-1.onrender.com",
     githubRepo: "https://github.com/Aditya-Jaiswal-082/Mindlytics",
-    image: "/mindlytics.jpg",
+    image: mindlyticsImg,
   },
   {
     name: "Parcel Swift",
@@ -390,7 +397,7 @@ const projects = [
     category: "Full Stack",
     liveDemo: "https://parcelswift.vercel.app",
     githubRepo: "https://github.com/Aditya-Jaiswal-082/parcel",
-    image: "/parcelswift.jpg",
+    image: parcelswiftImg,
   },
   {
     name: "Finotes",
@@ -399,7 +406,7 @@ const projects = [
     category: "Frontend",
     liveDemo: "#",
     githubRepo: "https://github.com/Aditya-Jaiswal-082/Finotes",
-    image: "/finotes.jpg",
+    image: finotesImg,
   },
   {
     name: "MY-TO-DO",
@@ -408,7 +415,7 @@ const projects = [
     category: "Frontend",
     liveDemo: "#",
     githubRepo: "https://github.com/Aditya-Jaiswal-082/MY-TO-DO",
-    image: "/mytodo.jpg",
+    image: mytodoImg,
   },
   {
     name: "Tic-Grid-Toe",
@@ -417,7 +424,7 @@ const projects = [
     category: "Mobile",
     liveDemo: "#",
     githubRepo: "https://github.com/Aditya-Jaiswal-082/TicTacToeApp-Expo",
-    image: "/ticgridtoe.jpg",
+    image: ticgridtoeImg,
   },
 ];
 
