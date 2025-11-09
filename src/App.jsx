@@ -20,7 +20,7 @@ import { AboutSection } from "./components/AboutSection";
 import { ProjectsSection } from "./components/ProjectsSection";
 import { ExperienceSection } from "./components/ExperienceSection";
 import { EducationSection } from "./components/EducationSection";
-import { CertificatesSection } from "./components/CertificatesSection";
+// import { CertificatesSection } from "./components/CertificatesSection";
 import { ContactSection } from "./components/ContactSection";
 import { Footer } from "./components/Footer";
 
@@ -59,7 +59,7 @@ function App() {
           <ProjectsSection />
           <ExperienceSection />
           <EducationSection />
-          <CertificatesSection />
+          {/* <CertificatesSection /> */}
           <ContactSection />
           <Footer />
         </>
