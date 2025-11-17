@@ -422,7 +422,7 @@ const projects = [
     description: "Fun React Native tic-tac-toe game with smooth animations",
     techStack: ["React Native", "Expo", "JavaScript"],
     category: "Mobile",
-    liveDemo: "#",
+    liveDemo: "https://ticgridtoe.onrender.com",
     githubRepo: "https://github.com/Aditya-Jaiswal-082/TicTacToeApp-Expo",
     image: ticgridtoeImg,
   },
