@@ -1,6 +1,8 @@
 // src/components/SEO.jsx
 
 import React, { useEffect } from "react";
+<meta name="google-site-verification" content="jlmVpCG6PtQvbZRBVEUf7Xow1_oeT6atfBr4ifpFBcw" />
+
 
 export const SEO = ({
   title = "Aditya Jaiswal | Full Stack Developer",
@@ -8,6 +10,7 @@ export const SEO = ({
   keywords = "Full Stack Developer, React Developer, Node.js, MongoDB, Web Developer, Aditya Jaiswal",
   image = "/og-image.jpg",
   url = "https://adityajaiswal.dev"
+  
 }) => {
   useEffect(() => {
     document.title = title;

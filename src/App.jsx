@@ -13,6 +13,7 @@ import { ScrollProgress } from "./components/ScrollProgress";
 import { BackToTop } from "./components/BackToTop";
 import { Navbar } from "./components/Navbar";
 import { StatsSection } from "./components/StatsSection";
+import Snowfall from "react-snowfall";
 
 // Main sections
 import { HeroSection } from "./components/HeroSection";
@@ -40,7 +41,20 @@ function App() {
   };
 
   return (
+    
     <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
+    {/* <Snowfall
+  style={{
+    position: "fixed",
+    width: "100vw",
+    height: "100vh",
+    zIndex: 9999,
+    pointerEvents: "none",
+  }}
+  snowflakeCount={70}
+  color="pink"
+/> */}
+
       <GlobalStyles />
       <SEO />
       

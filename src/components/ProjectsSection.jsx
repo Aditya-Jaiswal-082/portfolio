@@ -393,7 +393,7 @@ const projects = [
   {
     name: "Parcel Swift",
     description: "City-wide parcel delivery web platform with live tracking & role management",
-    techStack: ["React", "Node.js", "MongoDB", "Express", "CSS"],
+    techStack: ["React", "Node.js", "MongoDB", "Express","HTML", "CSS"],
     category: "Full Stack",
     liveDemo: "https://parcelswift.vercel.app",
     githubRepo: "https://github.com/Aditya-Jaiswal-082/parcel",

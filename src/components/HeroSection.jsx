@@ -369,7 +369,7 @@ export const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          Full Stack Web Developer
+          Full Stack Web Developer | Data Analyst
         </Subtitle>
         <Tagline
           initial={{ opacity: 0, y: -20 }}
@@ -384,7 +384,7 @@ export const HeroSection = () => {
           transition={{ duration: 0.8, delay: 1 }}
         >
           <Button 
-            href="/Aditya_Jaiswal_Resume.pdf" 
+            href="/Aditya Jaiswal D.pdf" 
             download 
             primary
             whileHover={{ scale: 1.05 }}
